@@ -32,7 +32,19 @@
 
 <script>
 
+var toDoCount = 0;
 
+$("#addToDo").on("click", function(event) {
+
+    event.preventDefault();
+
+    var toDoList = $("#toDo").val().trim();
+
+    var toDoItem = $("<p>");
+
+    toDoItem.attr("id", "item-" + toDoCount);
+    toDoItem.append(" " + toDoList);
+})
 </script>
 </body>
 </html>
