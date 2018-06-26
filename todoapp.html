@@ -32,14 +32,18 @@
 
 <script>
 
+// the initial place holder varible
 var toDoCount = 0;
 
+// on click event to add items onto the list
 $("#addToDo").on("click", function(event) {
 
     event.preventDefault();
 
+// store the value entered in the textbox
     var toDoList = $("#toDo").val().trim();
 
+// a new <p> that can hold the list
     var toDoItem = $("<p>");
 
     toDoItem.attr("id", "item-" + toDoCount);
